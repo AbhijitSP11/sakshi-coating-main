@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 220" role="img" aria-labelledby="title desc">
+  <title id="title">SP Solutions Logo</title>
+  <desc id="desc">SP Solutions specialist in EPU, epoxy, PU and other coatings</desc>
+
+  <defs>
+    <linearGradient id="blueGrad" x1="0" x2="1">
+      <stop offset="0" stop-color="#0f5ca2" />
+      <stop offset="1" stop-color="#084b8a" />
+    </linearGradient>
+    <linearGradient id="yellowGrad" x1="0" x2="1">
+      <stop offset="0" stop-color="#ffd44d" />
+      <stop offset="1" stop-color="#f3c316" />
+    </linearGradient>
+  </defs>
+
+  <rect x="8" y="18" width="764" height="184" rx="8" fill="#ffffff" />
+  <rect x="16" y="26" width="748" height="12" fill="url(#blueGrad)" />
+  <rect x="16" y="182" width="748" height="12" fill="url(#blueGrad)" />
+  <rect x="16" y="168" width="748" height="10" fill="url(#yellowGrad)" />
+
+  <g transform="translate(36 54)">
+    <path d="M40 84c-10 0-20-7-23-17l-9-29c-5-15 6-30 21-30h76c10 0 18 8 18 18v44c0 8-6 14-14 14z" fill="#58a8df" />
+    <path d="M28 62h75l-10 26H38z" fill="#0a4f91" opacity=".85" />
+    <rect x="30" y="22" width="84" height="36" rx="4" fill="#f6f8fb" stroke="#d6deea" stroke-width="2" />
+    <rect x="53" y="0" width="44" height="24" rx="11" fill="url(#blueGrad)" />
+    <circle cx="59" cy="94" r="8" fill="#66b6eb" />
+    <circle cx="96" cy="100" r="6" fill="#66b6eb" />
+  </g>
+
+  <g fill="#0b4f91">
+    <text x="190" y="108" font-family="Rubik, Arial, sans-serif" font-size="78" font-weight="700" letter-spacing="2">
+      SP SOLUTIONS
+    </text>
+    <text x="190" y="154" font-family="Rubik, Arial, sans-serif" font-size="42" font-weight="400">
+      Specialist in EPU, EPOXY, PU and other coatings.
+    </text>
+  </g>
+</svg>

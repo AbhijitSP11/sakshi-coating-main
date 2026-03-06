@@ -1,38 +1,73 @@
 import { Link, NavLink } from 'react-router-dom';
-import { useState } from 'react';
+import { useState, type MouseEvent } from 'react';
+import logo from '../assets/sp-solutions-logo.svg';
 
 const navItems = [
   { to: '/', label: 'Home' },
   { to: '/about', label: 'About Us' },
+  { to: '/products', label: 'Services' },
   { to: '/contact', label: 'Contact' },
 ];
 
-const productDropdown = [
+const serviceDropdown = [
   {
-    title: 'Epoxy Floor Coating System',
+    title: 'Flooring Systems',
     to: '/products',
-    subProducts: ['Primers', 'Screed Coat', 'Self Level Top Coat'],
+    subProducts: [
+      { label: 'Architectural Coatings', to: '/products/architectural-coatings-epoxy-grouting' },
+      { label: 'Epoxy Flooring', to: '/products/epoxy-flooring-systems' },
+      { label: 'PU Concrete Flooring', to: '/products/pu-concrete-flooring' },
+      { label: 'EPU Hybrid Flooring', to: '/products/epu-hybrid-flooring' },
+  ],
   },
   {
-    title: 'Epoxy Paint / Coating System',
+    title: 'Protective Coatings',
     to: '/products',
-    subProducts: ['2 Pack Epoxy Primer', '2 Pack Epoxy Top/Finish Paint', 'Epoxy Clear Coating'],
+    subProducts: [
+      { label: 'ESD / Anti-Static Flooring', to: '/products/esd-anti-static-flooring' },
+      { label: 'Acid & Chemical Resistant Flooring', to: '/products/acid-chemical-resistant-flooring' },
+      { label: 'Industrial Painting', to: '/products/industrial-commercial-coatings' },
+    ],
   },
 ];
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
-  const [productsOpen, setProductsOpen] = useState(false);
+  const [servicesOpen, setServicesOpen] = useState(false);
+  const [servicesMenuOpen, setServicesMenuOpen] = useState(false);
+  const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null);
+  const [submenuDirection, setSubmenuDirection] = useState<'left' | 'right'>('right');
+
+  const handleServicesClick = (event: MouseEvent<HTMLAnchorElement>) => {
+    event.preventDefault();
+    setServicesMenuOpen((value) => !value);
+  };
+
+  const handleSubmenuEnter = (event: MouseEvent<HTMLDivElement>, key: string) => {
+    const rect = event.currentTarget.getBoundingClientRect();
+    const submenuWidth = 260;
+    const viewportPadding = 16;
+    const hasRightSpace = window.innerWidth - rect.right >= submenuWidth + viewportPadding;
+    const hasLeftSpace = rect.left >= submenuWidth + viewportPadding;
+
+    if (hasRightSpace || !hasLeftSpace) {
+      setSubmenuDirection('right');
+    } else {
+      setSubmenuDirection('left');
+    }
+
+    setActiveSubmenu(key);
+  };
 
   return (
     <header className="absolute left-0 top-0 z-50 w-full">
       <div className="bg-[#4f81bd] text-white">
-        <div className="mx-auto flex w-full max-w-[1200px] items-center justify-between px-4 py-2 text-sm">
-          <a href="mailto:response@sakshicoating.com" className="hover:text-[#ffc219]">
-            response@sakshicoating.com
+        <div className="mx-auto flex w-full max-w-[1200px] items-center justify-between gap-3 px-4 py-2 text-xs sm:text-sm">
+          <a href="mailto:spsolutions.in.com@gmail.com" className="hidden truncate hover:text-[#ffc219] sm:inline-block">
+            spsolutions.in.com@gmail.com
           </a>
-          <a href="tel:+919867143094" className="hover:text-[#ffc219]">
-            +91-9867143094
+          <a href="tel:+919890002239" className="hover:text-[#ffc219]">
+            +91-9890002239
           </a>
         </div>
       </div>
@@ -40,8 +75,7 @@ export default function Navbar() {
       <div className="bg-transparent">
         <div className="mx-auto flex w-full max-w-[1200px] items-center justify-between px-4 py-3 lg:py-4">
           <Link to="/" className="flex items-center">
-            <img src="https://sakshicoating.com/images/logo.png" alt="Sakshi Coating" className="hidden h-[72px] w-auto sm:block lg:h-[85px]" />
-            <img src="https://sakshicoating.com/images/logo-res.png" alt="Sakshi Coating" className="h-[45px] w-auto sm:hidden" />
+            <img src={logo} alt="SP Solutions" className="h-[48px] w-auto rounded bg-white/95 p-1 sm:h-[58px] lg:h-[68px]" />
           </Link>
 
           <button className="rounded border border-white/60 px-3 py-2 text-white lg:hidden" onClick={() => setOpen((value) => !value)} type="button">
@@ -61,43 +95,70 @@ export default function Navbar() {
               </NavLink>
             ))}
 
-            <div className="group relative flex items-center gap-2">
+            <div
+              className="relative flex items-center gap-2"
+              onMouseEnter={() => setServicesMenuOpen(true)}
+              onMouseLeave={() => {
+                setServicesMenuOpen(false);
+                setActiveSubmenu(null);
+              }}
+            >
               <NavLink
                 to="/products"
+                onClick={handleServicesClick}
                 className={({ isActive }) =>
                   `text-[14px] font-medium uppercase tracking-[0.3px] ${isActive ? 'bg-[#ffc219] px-3 py-2 text-[#1f3f68]' : 'text-white hover:text-[#ffc219]'}`
                 }
               >
-                Products
+                Services
               </NavLink>
-              <span className="cursor-default rounded-full border border-white/70 px-2 py-0.5 text-white transition group-hover:border-[#ffc219] group-hover:text-[#ffc219]">
-                +
-              </span>
 
-              <div className="invisible absolute left-0 top-full z-50 mt-2 w-[320px] translate-y-2 bg-white opacity-0 shadow-xl transition duration-200 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100">
-                {productDropdown.map((item) => (
-                  <div key={item.title} className="group/item relative border-b border-[#e5eef9] last:border-b-0">
-                    <Link to={item.to} className="flex items-center justify-between px-4 py-3 text-[13px] font-medium uppercase text-[#1f3f68] hover:bg-[#f8fbff]">
-                      <span>{item.title}</span>
-                      <span className="rounded-full border border-[#4f81bd] px-2 py-0.5 text-[#4f81bd]">+</span>
-                    </Link>
-                    <div className="invisible absolute left-full top-0 z-50 ml-1 w-[260px] bg-white opacity-0 shadow-xl transition group-hover/item:visible group-hover/item:opacity-100">
-                      {item.subProducts.map((subProduct) => (
-                        <Link
-                          key={subProduct}
-                          to="/products"
-                          className="block border-b border-[#e5eef9] px-4 py-3 text-[12px] font-medium uppercase text-[#1f3f68] hover:bg-[#4f81bd] hover:text-white"
-                        >
-                          {subProduct}
-                        </Link>
-                      ))}
+              <button
+                type="button"
+                onClick={() => setServicesMenuOpen((value) => !value)}
+                className="rounded-full border border-white/70 px-2 py-0.5 text-white transition hover:border-[#ffc219] hover:text-[#ffc219]"
+              >
+                +
+              </button>
+
+              <div className={`absolute left-0 top-full z-50 w-[320px] pt-2 transition duration-200 ${servicesMenuOpen ? 'visible opacity-100' : 'invisible opacity-0'}`}>
+                <div className="bg-white shadow-xl">
+                  <Link to="/products" className="block border-b border-[#e5eef9] bg-[#f8fbff] px-4 py-3 text-[12px] font-semibold uppercase text-[#4f81bd] hover:bg-[#e9f2fb]">
+                    All Services
+                  </Link>
+                  {serviceDropdown.map((item) => (
+                    <div
+                      key={item.title}
+                      className="relative border-b border-[#e5eef9] last:border-b-0"
+                      onMouseEnter={(event) => handleSubmenuEnter(event, item.title)}
+                      onMouseLeave={() => setActiveSubmenu(null)}
+                    >
+                      <Link to={item.to} className="flex items-center justify-between px-4 py-3 text-[13px] font-medium uppercase text-[#1f3f68] hover:bg-[#f8fbff]">
+                        <span>{item.title}</span>
+                        <span className="rounded-full border border-[#4f81bd] px-2 py-0.5 text-[#4f81bd]">+</span>
+                      </Link>
+                      <div
+                        className={`absolute top-0 z-50 w-[260px] bg-white shadow-xl transition ${submenuDirection === 'right' ? 'left-full' : 'right-full'} ${
+                          activeSubmenu === item.title ? 'visible opacity-100' : 'invisible opacity-0'
+                        }`}
+                      >
+                        {item.subProducts.map((subProduct) => (
+                          <Link
+                            key={subProduct.label}
+                            to={subProduct.to}
+                            className="block border-b border-[#e5eef9] px-4 py-3 text-[12px] font-medium uppercase text-[#1f3f68] hover:bg-[#4f81bd] hover:text-white"
+                          >
+                            {subProduct.label}
+                          </Link>
+                        ))}
+                      </div>
                     </div>
-                  </div>
-                ))}
+                  ))}
+                </div>
               </div>
             </div>
 
-            {navItems.slice(2).map((item) => (
+            {navItems.slice(3).map((item) => (
               <NavLink
                 key={item.to}
                 to={item.to}
@@ -132,24 +193,24 @@ export default function Navbar() {
               <div className="rounded border border-white/20">
                 <button
                   type="button"
-                  onClick={() => setProductsOpen((value) => !value)}
+                  onClick={() => setServicesOpen((value) => !value)}
                   className="flex w-full items-center justify-between px-3 py-2 text-left text-sm font-medium uppercase text-white"
                 >
-                  <span>Products</span>
+                  <span>Services</span>
                   <span className="rounded-full border border-white/70 px-2 py-0.5">+</span>
                 </button>
 
-                {productsOpen && (
+                {servicesOpen && (
                   <div className="space-y-2 border-t border-white/20 bg-[#274d7b] px-3 py-3">
-                    {productDropdown.map((item) => (
+                    {serviceDropdown.map((item) => (
                       <div key={item.title}>
-                        <Link to="/products" onClick={() => setOpen(false)} className="block py-1 text-xs font-semibold uppercase text-[#ffc219]">
+                        <Link to={item.to} onClick={() => setOpen(false)} className="block py-1 text-xs font-semibold uppercase text-[#ffc219]">
                           {item.title}
                         </Link>
                         <div className="ml-3 space-y-1">
                           {item.subProducts.map((subProduct) => (
-                            <Link key={subProduct} to="/products" onClick={() => setOpen(false)} className="block py-1 text-xs uppercase text-white/90">
-                              {subProduct}
+                            <Link key={subProduct.label} to={subProduct.to} onClick={() => setOpen(false)} className="block py-1 text-xs uppercase text-white/90">
+                              {subProduct.label}
                             </Link>
                           ))}
                         </div>
@@ -173,5 +234,3 @@ export default function Navbar() {
     </header>
   );
 }
-
-
