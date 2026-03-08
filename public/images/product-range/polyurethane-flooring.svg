@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">Polyurethane Flooring</title>
+  <desc id="desc">Illustrative image for polyurethane flooring systems</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#2d4858" />
+      <stop offset="100%" stop-color="#0f7a8a" />
+    </linearGradient>
+    <linearGradient id="strip" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#ffd777" />
+      <stop offset="100%" stop-color="#f0b43e" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#bg)" />
+  <rect x="70" y="460" width="1060" height="180" rx="16" fill="#d7f1f4" />
+  <rect x="100" y="515" width="1000" height="30" rx="10" fill="url(#strip)" />
+  <g fill="none" stroke="#95b9bf" stroke-width="6">
+    <path d="M120 640 Q300 560 480 640 T840 640 T1080 640" />
+    <path d="M120 600 Q300 520 480 600 T840 600 T1080 600" />
+  </g>
+  <text x="90" y="210" fill="#ffffff" font-size="68" font-family="Segoe UI, Arial, sans-serif" font-weight="700">Polyurethane Flooring</text>
+  <text x="90" y="275" fill="#d7f3f7" font-size="34" font-family="Segoe UI, Arial, sans-serif">Flexible and impact-resistant system</text>
+</svg>

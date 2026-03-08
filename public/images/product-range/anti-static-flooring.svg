@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">ESD Anti-Static Flooring</title>
+  <desc id="desc">Illustrative image for anti-static flooring systems</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#2a2f4d" />
+      <stop offset="100%" stop-color="#3e4f78" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#bg)" />
+  <rect x="110" y="420" width="980" height="260" rx="16" fill="#e8edf6" />
+  <g stroke="#8ea0bd" stroke-width="4">
+    <line x1="110" y1="500" x2="1090" y2="500" />
+    <line x1="110" y1="580" x2="1090" y2="580" />
+    <line x1="250" y1="420" x2="250" y2="680" />
+    <line x1="390" y1="420" x2="390" y2="680" />
+    <line x1="530" y1="420" x2="530" y2="680" />
+    <line x1="670" y1="420" x2="670" y2="680" />
+    <line x1="810" y1="420" x2="810" y2="680" />
+    <line x1="950" y1="420" x2="950" y2="680" />
+  </g>
+  <circle cx="1020" cy="520" r="48" fill="none" stroke="#4f81bd" stroke-width="10" />
+  <path d="M1020 458 L1010 515 L1040 515 L1022 580" fill="none" stroke="#4f81bd" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" />
+  <text x="110" y="210" fill="#ffffff" font-size="64" font-family="Segoe UI, Arial, sans-serif" font-weight="700">ESD / Anti-Static Flooring</text>
+  <text x="110" y="275" fill="#dbe3f6" font-size="34" font-family="Segoe UI, Arial, sans-serif">Controlled static discharge protection</text>
+</svg>

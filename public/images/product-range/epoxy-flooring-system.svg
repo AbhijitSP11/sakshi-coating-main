@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">Epoxy Flooring System</title>
+  <desc id="desc">Illustrative image for epoxy flooring systems</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1f3f68" />
+      <stop offset="100%" stop-color="#4f81bd" />
+    </linearGradient>
+    <linearGradient id="floor" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f5f7fa" />
+      <stop offset="100%" stop-color="#d8dee8" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#bg)" />
+  <rect x="120" y="420" width="960" height="260" rx="12" fill="url(#floor)" />
+  <g stroke="#b7c3d4" stroke-width="4">
+    <line x1="120" y1="485" x2="1080" y2="485" />
+    <line x1="120" y1="550" x2="1080" y2="550" />
+    <line x1="120" y1="615" x2="1080" y2="615" />
+    <line x1="280" y1="420" x2="280" y2="680" />
+    <line x1="440" y1="420" x2="440" y2="680" />
+    <line x1="600" y1="420" x2="600" y2="680" />
+    <line x1="760" y1="420" x2="760" y2="680" />
+    <line x1="920" y1="420" x2="920" y2="680" />
+  </g>
+  <text x="120" y="210" fill="#ffffff" font-size="68" font-family="Segoe UI, Arial, sans-serif" font-weight="700">Epoxy Flooring Systems</text>
+  <text x="120" y="275" fill="#dce8f8" font-size="34" font-family="Segoe UI, Arial, sans-serif">Seamless industrial floor finish</text>
+</svg>

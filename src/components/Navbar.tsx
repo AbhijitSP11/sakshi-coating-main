@@ -1,6 +1,6 @@
 import { Link, NavLink } from 'react-router-dom';
 import { useState, type MouseEvent } from 'react';
-import logo from '../assets/sp-solutions-logo.svg';
+import logo from '../assets/sp-solution-logo.svg';
 
 const navItems = [
   { to: '/', label: 'Home' },
