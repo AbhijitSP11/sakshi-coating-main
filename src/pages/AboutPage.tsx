@@ -1,3 +1,12 @@
+const whyChooseUs = [
+  { title: '25+ Years Experience', desc: 'Over two and a half decades of specialisation in industrial flooring systems across Nashik and Maharashtra.' },
+  { title: 'Dealer of Pidilite CIPY Products', desc: 'Authorised dealer ensuring you get genuine, high-performance CIPY epoxy and PU materials on every project.' },
+  { title: 'Skilled Application Team', desc: 'Trained technicians and supervised applicators delivering consistent, high-quality results.' },
+  { title: 'Industrial Client Experience', desc: 'Trusted by automobile plants, pharma facilities, warehouses, food processing units, and engineering plants.' },
+  { title: 'Fast Project Completion', desc: 'Efficient project scheduling minimises downtime and ensures timely handover.' },
+  { title: 'Strong After-Service Support', desc: 'Dedicated post-installation support and maintenance guidance for long-term floor performance.' },
+];
+
 export default function AboutPage() {
   return (
     <>
@@ -15,23 +24,23 @@ export default function AboutPage() {
         <div className="mx-auto max-w-[1200px]">
           <h3 className="section-title inline-block text-[40px] font-medium text-[#23244a]">Who <span className="text-[#ffc219]">We Are</span></h3>
           <p className="mt-6 text-[16px] leading-8">
-            We are specialists in industrial and commercial flooring systems, delivering reliable epoxy, polyurethane, and protective coating solutions for modern infrastructure. Our company is built on technical expertise, skilled workmanship, and a commitment to quality execution.
+            SP Solutions (Sakshi Coating) is a Nashik-based industrial flooring contractor with over <strong>25 years of hands-on experience</strong> in epoxy, polyurethane, and protective coating systems. We serve factories, warehouses, pharma plants, food processing units, and commercial spaces across Maharashtra.
           </p>
           <p className="mt-4 text-[16px] leading-8">
-            With extensive experience in surface preparation and coating application, we understand the unique requirements of different industries and provide customized flooring solutions that perform under demanding conditions.
+            As an authorised dealer of <strong>Pidilite CIPY products</strong>, we ensure that every project uses certified, high-performance materials. Our skilled application team delivers consistent, durable results — on time and within scope.
           </p>
 
           <div className="mt-10 grid gap-8 lg:grid-cols-2">
             <article className="rounded bg-[#f8fbff] p-8 shadow-sm">
               <h4 className="text-[28px] font-medium text-[#23244a]">Our Mission</h4>
               <p className="mt-4 text-[16px] leading-8">
-                To deliver durable, safe, and aesthetically superior flooring systems that enhance operational efficiency while reducing maintenance costs for our clients.
+                To deliver durable, safe, and high-performance flooring systems that enhance operational efficiency, hygiene, and safety while reducing long-term maintenance costs for our clients.
               </p>
             </article>
             <article className="rounded bg-[#f8fbff] p-8 shadow-sm">
               <h4 className="text-[28px] font-medium text-[#23244a]">Our Vision</h4>
               <p className="mt-4 text-[16px] leading-8">
-                To become a preferred flooring solutions partner known for quality, reliability, and technical excellence.
+                To be Maharashtra's most trusted industrial flooring partner — known for quality materials, skilled execution, and reliable after-service support.
               </p>
             </article>
           </div>
@@ -40,15 +49,15 @@ export default function AboutPage() {
 
       <section className="bg-[#f8f8f8] px-4 py-16">
         <div className="mx-auto max-w-[1200px]">
-          <h3 className="text-[34px] font-medium text-[#23244a]">Why Choose Us</h3>
-          <ul className="arrow-list mt-7 grid gap-3 text-[16px] md:grid-cols-2">
-            <li>Experienced technical team</li>
-            <li>Quality material application</li>
-            <li>Professional supervision</li>
-            <li>On-time project delivery</li>
-            <li>Customized flooring solutions</li>
-            <li>Strong after-service support</li>
-          </ul>
+          <h3 className="section-title inline-block text-[34px] font-medium text-[#23244a]">Why Choose <span className="text-[#ffc219]">Us</span></h3>
+          <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {whyChooseUs.map((item) => (
+              <article key={item.title} className="rounded bg-white p-6 shadow-sm">
+                <h4 className="text-[16px] font-semibold text-[#23244a]">{item.title}</h4>
+                <p className="mt-2 text-[14px] leading-7 text-[#55647a]">{item.desc}</p>
+              </article>
+            ))}
+          </div>
         </div>
       </section>
     </>
