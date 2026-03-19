@@ -8,6 +8,8 @@ interface FormState {
   email: string;
   location: string;
   country: string;
+  projectType: string;
+  areaInSqft: string;
   requirement: string;
   verificationCode: string;
   attachment: File | null;
@@ -20,10 +22,24 @@ const initialFormState: FormState = {
   email: '',
   location: '',
   country: '',
+  projectType: '',
+  areaInSqft: '',
   requirement: '',
   verificationCode: '',
   attachment: null,
 };
+
+const projectTypes = [
+  'Industrial Epoxy Flooring',
+  'Self Levelling Flooring',
+  'PU Concrete Flooring',
+  'Anti-Skid Car Parking Flooring',
+  'ESD / Anti-Static Flooring',
+  'Food Grade Epoxy Flooring',
+  'Acid & Chemical Resistant Flooring',
+  'Decorative Flooring',
+  'Other',
+];
 
 const formVerificationCode = 'SP26';
 const enquiryRecipient = 'spsolutions.in.com@gmail.com';
@@ -38,6 +54,7 @@ const validateForm = (form: FormState) => {
   if (form.email && !/^\S+@\S+\.\S+$/.test(form.email)) nextErrors.email = 'Enter a valid email address.';
   if (!form.location.trim()) nextErrors.location = 'Location is required.';
   if (!form.country.trim()) nextErrors.country = 'Country is required.';
+  if (!form.projectType.trim()) nextErrors.projectType = 'Project type is required.';
   if (!form.requirement.trim()) nextErrors.requirement = 'Requirement details are required.';
   if (!form.verificationCode.trim()) nextErrors.verificationCode = 'Verification code is required.';
   if (form.verificationCode.trim() && form.verificationCode.trim().toUpperCase() !== formVerificationCode) {
@@ -83,6 +100,8 @@ export default function EnquiryPage() {
       formData.append('mobile_number', form.phone);
       formData.append('location', form.location);
       formData.append('country', form.country);
+      formData.append('project_type', form.projectType);
+      if (form.areaInSqft.trim()) formData.append('area_sqft', form.areaInSqft);
       formData.append('requirement_details', form.requirement);
 
       if (form.attachment) {
@@ -157,6 +176,28 @@ export default function EnquiryPage() {
               </select>
               {errors.country ? <span className="mt-1 block text-xs text-red-600">{errors.country}</span> : null}
             </label>
+
+            <label className="block text-[14px] text-[#23244a]">
+              <span className="mb-2 block font-medium">Project Type : *</span>
+              <select
+                value={form.projectType}
+                onChange={(event) => setForm((prev) => ({ ...prev, projectType: event.target.value }))}
+                className="h-[50px] w-full border border-[#ced4da] bg-white px-3 text-sm outline-none focus:border-[#ffc219]"
+              >
+                <option value="">Select project type</option>
+                {projectTypes.map((pt) => (
+                  <option key={pt} value={pt}>{pt}</option>
+                ))}
+              </select>
+              {errors.projectType ? <span className="mt-1 block text-xs text-red-600">{errors.projectType}</span> : null}
+            </label>
+
+            <FormInput
+              label="Area (in Square Feet) :"
+              value={form.areaInSqft}
+              onChange={(event) => setForm((prev) => ({ ...prev, areaInSqft: event.target.value }))}
+              error={errors.areaInSqft}
+            />
 
             <label className="block text-[14px] text-[#23244a]">
               <span className="mb-2 block font-medium">Attach File</span>
