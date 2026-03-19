@@ -2,12 +2,12 @@ import { Link } from 'react-router-dom';
 import { products } from '../data/products';
 
 const trustedClients = [
-  { name: 'Mahindra', logo: 'https://logo.clearbit.com/mahindra.com' },
-  { name: 'Bosch', logo: 'https://logo.clearbit.com/bosch.com' },
-  { name: 'ThyssenKrupp', logo: 'https://logo.clearbit.com/thyssenkrupp.com' },
-  { name: 'Pidilite', logo: 'https://logo.clearbit.com/pidilite.com' },
-  { name: 'MSS India', logo: null },
-  { name: 'Vaishnavi Auto', logo: null },
+  { name: 'Mahindra', logo: '/images/mahindra-logo.png' },
+  { name: 'Bosch', logo: '/images/bosch-logo.png' },
+  { name: 'ThyssenKrupp', logo: '/images/ThyssenKrupp.png' },
+  { name: 'Pidilite', logo: '/images/Pidilite_logo.png' },
+  { name: 'MSS India', logo: '/images/mss-india-logo.png' },
+  { name: 'Vaishnavi Auto', logo: '/images/viashnavi-auto-logo.png' },
 ];
 
 const whyChooseUs = [
@@ -132,28 +132,28 @@ export default function HomePage() {
       </section>
 
       {/* ── TRUSTED CLIENTS ── */}
-      <section className="border-b border-[#e8eef6] bg-white px-4 py-10">
+      <section className="border-b border-[#e5e5e5] bg-white px-4 py-10">
         <div className="mx-auto max-w-[1200px]">
-          <p className="mb-6 text-center text-xs font-semibold uppercase tracking-[2px] text-[#7a8faa]">Trusted by Leading Industrial Companies</p>
+          <p className="mb-6 text-center text-xs font-semibold uppercase tracking-[2px] text-[#999]">Trusted by Leading Industrial Companies</p>
           <div className="flex flex-wrap items-center justify-center gap-6 md:gap-10">
             {trustedClients.map(({ name, logo }) => (
               <div
                 key={name}
-                className="flex min-w-[110px] flex-col items-center gap-2 rounded border border-[#dde8f4] bg-[#f8fbff] px-6 py-4 transition hover:border-[#4f81bd] hover:shadow-sm"
+                className="flex min-w-[110px] flex-col items-center gap-2 border border-[#e5e5e5] bg-white px-6 py-4 transition hover:border-[#ffc219] hover:shadow-sm"
               >
                 {logo ? (
                   <img
                     src={logo}
                     alt={name}
-                    className="h-9 w-auto object-contain grayscale opacity-60 transition hover:grayscale-0 hover:opacity-100"
+                    className="h-9 w-auto object-contain grayscale opacity-50 transition hover:grayscale-0 hover:opacity-100"
                     onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
                   />
                 ) : (
-                  <div className="flex h-9 w-9 items-center justify-center rounded-full bg-[#1f3f68] text-[13px] font-bold text-white">
+                  <div className="flex h-9 w-9 items-center justify-center bg-[#222] text-[13px] font-bold text-white">
                     {name.slice(0, 2).toUpperCase()}
                   </div>
                 )}
-                <span className="text-[13px] font-semibold text-[#1f3f68]">{name}</span>
+                <span className="text-[13px] font-semibold text-[#222]">{name}</span>
               </div>
             ))}
           </div>
@@ -164,7 +164,7 @@ export default function HomePage() {
       <section className="px-4 py-16 md:py-20">
         <div className="mx-auto max-w-[1200px]">
           <div className="mx-auto max-w-[980px] text-center">
-            <h2 className="section-title inline-block text-[38px] font-medium text-[#23244a]">About <span className="text-[#ffc219]">SP Solutions</span></h2>
+            <h2 className="section-title inline-block text-[38px] font-medium text-[#222]">About <span className="text-[#ffc219]">SP Solutions</span></h2>
             <p className="mt-5 text-[16px] leading-8">
               SP Solutions (Sakshi Coating) is a Nashik-based industrial flooring contractor with over <strong>25 years of experience</strong>. We specialise in epoxy, polyurethane, and protective coating systems for factories, warehouses, pharma plants, and commercial spaces. As an authorised dealer of <strong>Pidilite CIPY products</strong>, we guarantee material quality and performance on every project.
             </p>
@@ -172,7 +172,7 @@ export default function HomePage() {
 
           <div className="mt-12 grid gap-8 lg:grid-cols-2">
             <article className="bg-white p-6 shadow-[0_0_30px_rgba(0,0,0,0.09)] md:p-8">
-              <h5 className="text-[20px] font-medium uppercase text-[#23244a]">What We Do</h5>
+              <h5 className="text-[20px] font-medium uppercase text-[#222]">What We Do</h5>
               <ul className="arrow-list mt-4 space-y-2 text-[15px] leading-7">
                 <li>Industrial epoxy flooring installation</li>
                 <li>Self levelling flooring systems</li>
@@ -183,12 +183,12 @@ export default function HomePage() {
                 <li>Industrial painting solutions</li>
               </ul>
             </article>
-            <article className="bg-[#f8fbff] p-6 shadow-[0_0_30px_rgba(0,0,0,0.09)] md:p-8">
-              <h5 className="text-[20px] font-medium uppercase text-[#23244a]">From Consultation To Final Finish</h5>
+            <article className="bg-[#f5f5f5] p-6 shadow-[0_0_30px_rgba(0,0,0,0.09)] md:p-8">
+              <h5 className="text-[20px] font-medium uppercase text-[#222]">From Consultation To Final Finish</h5>
               <p className="mt-4 text-[15px] leading-8">
                 Our team brings 25+ years of hands-on experience across manufacturing, automotive, healthcare, and pharma spaces. We focus on precision execution, quality Pidilite CIPY materials, and timely completion for maximum client satisfaction.
               </p>
-              <Link to="/about" className="mt-6 inline-block rounded border border-[#23244a] px-5 py-2 text-sm font-medium uppercase text-[#23244a] hover:bg-[#23244a] hover:text-white">
+              <Link to="/about" className="mt-6 inline-block border border-[#222] px-5 py-2 text-sm font-medium uppercase text-[#222] hover:bg-[#222] hover:text-white">
                 Read More
               </Link>
             </article>
@@ -197,21 +197,21 @@ export default function HomePage() {
       </section>
 
       {/* ── SERVICES (ICON CARDS) ── */}
-      <section className="bg-[#f8fbff] px-4 py-16">
+      <section className="bg-[#1a1a1a] px-4 py-16">
         <div className="mx-auto max-w-[1200px]">
-          <h2 className="section-title inline-block text-[38px] font-medium text-[#23244a]">Our <span className="text-[#ffc219]">Services</span></h2>
-          <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          <h2 className="section-title inline-block text-[38px] font-medium text-white">Our <span className="text-[#ffc219]">Services</span></h2>
+          <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {serviceCards.map((svc) => (
-              <article key={svc.title} className="flex items-start gap-4 rounded bg-white p-6 shadow-sm transition hover:shadow-md">
-                <span className="mt-1 flex-shrink-0 text-[#ffc219]">{svc.icon}</span>
-                <div>
-                  <h4 className="text-[17px] font-semibold text-[#23244a]">{svc.title}</h4>
-                </div>
+              <article key={svc.title} className="group flex items-center gap-5 border border-white/10 bg-white/5 p-6 transition-all duration-200 hover:border-[#ffc219]/60 hover:bg-white/10">
+                <span className="flex h-14 w-14 flex-shrink-0 items-center justify-center bg-[#ffc219]/10 text-[#ffc219] transition-colors duration-200 group-hover:bg-[#ffc219] group-hover:text-[#1a1a1a]">
+                  {svc.icon}
+                </span>
+                <h4 className="text-[16px] font-semibold leading-snug text-white/90 group-hover:text-white">{svc.title}</h4>
               </article>
             ))}
           </div>
-          <div className="mt-8 text-center">
-            <Link to="/products" className="btn-theme rounded-full px-8 py-3 text-sm font-semibold uppercase">View All Services</Link>
+          <div className="mt-10 text-center">
+            <Link to="/products" className="btn-theme inline-block px-8 py-3 text-sm font-semibold uppercase tracking-wide">View All Services</Link>
           </div>
         </div>
       </section>
@@ -219,13 +219,13 @@ export default function HomePage() {
       {/* ── WHY CHOOSE US ── */}
       <section className="px-4 py-16 md:py-20">
         <div className="mx-auto max-w-[1200px]">
-          <h2 className="section-title inline-block text-[38px] font-medium text-[#23244a]">Why Choose <span className="text-[#ffc219]">Us</span></h2>
+          <h2 className="section-title inline-block text-[38px] font-medium text-[#222]">Why Choose <span className="text-[#ffc219]">Us</span></h2>
           <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
             {whyChooseUs.map((item) => (
-              <article key={item.title} className="rounded bg-[#f8fbff] p-6 text-center shadow-sm">
+              <article key={item.title} className="border border-[#e5e5e5] bg-white p-6 text-center transition hover:border-[#ffc219] hover:shadow-md">
                 <div className="mb-3 text-4xl">{item.icon}</div>
-                <h4 className="text-[16px] font-semibold text-[#23244a]">{item.title}</h4>
-                <p className="mt-2 text-[13px] leading-6 text-[#55647a]">{item.desc}</p>
+                <h4 className="text-[16px] font-semibold text-[#222]">{item.title}</h4>
+                <p className="mt-2 text-[13px] leading-6 text-[#666]">{item.desc}</p>
               </article>
             ))}
           </div>
@@ -233,15 +233,15 @@ export default function HomePage() {
       </section>
 
       {/* ── OUR PROCESS ── */}
-      <section className="bg-[#1f3f68] px-4 py-16 md:py-20">
+      <section className="bg-[#1a1a1a] px-4 py-16 md:py-20">
         <div className="mx-auto max-w-[1200px]">
           <h2 className="section-title inline-block text-[38px] font-medium text-white">Our <span className="text-[#ffc219]">Process</span></h2>
-          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-5">
+          <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
             {processSteps.map((s) => (
-              <article key={s.step} className="relative rounded bg-white/10 p-6 text-white">
-                <div className="mb-3 text-[36px] font-bold text-[#ffc219]/60">{s.step}</div>
+              <article key={s.step} className="relative border border-white/10 bg-white/5 p-6 text-white">
+                <div className="mb-3 text-[36px] font-bold text-[#ffc219]">{s.step}</div>
                 <h4 className="text-[16px] font-semibold text-white">{s.title}</h4>
-                <p className="mt-2 text-[13px] leading-6 text-white/75">{s.desc}</p>
+                <p className="mt-2 text-[13px] leading-6 text-white/70">{s.desc}</p>
               </article>
             ))}
           </div>
@@ -251,8 +251,8 @@ export default function HomePage() {
       {/* ── BEFORE & AFTER GALLERY ── */}
       <section className="px-4 py-16 md:py-20">
         <div className="mx-auto max-w-[1200px]">
-          <h2 className="section-title inline-block text-[38px] font-medium text-[#23244a]">Project <span className="text-[#ffc219]">Gallery</span></h2>
-          <p className="mt-2 text-[15px] text-[#55647a]">Before &amp; after results from our completed projects.</p>
+          <h2 className="section-title inline-block text-[38px] font-medium text-[#222]">Project <span className="text-[#ffc219]">Gallery</span></h2>
+          <p className="mt-2 text-[15px] text-[#666]">Before &amp; after results from our completed projects.</p>
           <div className="mt-8 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {galleryItems.map((item) => (
               <article key={item.caption} className="overflow-hidden rounded shadow-sm">
@@ -267,7 +267,7 @@ export default function HomePage() {
                         t.src = 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=700&q=80';
                       }}
                     />
-                    <span className="absolute left-2 top-2 rounded bg-[#1f3f68]/80 px-2 py-0.5 text-[11px] font-semibold uppercase text-white">Before</span>
+                    <span className="absolute left-2 top-2 bg-black/70 px-2 py-0.5 text-[11px] font-semibold uppercase text-white">Before</span>
                   </div>
                   <div className="relative">
                     <img
@@ -279,10 +279,10 @@ export default function HomePage() {
                         t.src = 'https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=700&q=80';
                       }}
                     />
-                    <span className="absolute left-2 top-2 rounded bg-[#ffc219] px-2 py-0.5 text-[11px] font-semibold uppercase text-[#1f3f68]">After</span>
+                    <span className="absolute left-2 top-2 rounded bg-[#ffc219] px-2 py-0.5 text-[11px] font-semibold uppercase text-[#222]">After</span>
                   </div>
                 </div>
-                <div className="bg-[#f8fbff] px-4 py-3 text-[13px] font-medium text-[#23244a]">{item.caption}</div>
+                <div className="bg-white px-4 py-3 text-[13px] font-medium text-[#222]">{item.caption}</div>
               </article>
             ))}
           </div>
@@ -290,15 +290,15 @@ export default function HomePage() {
       </section>
 
       {/* ── PRODUCT RANGE ── */}
-      <section className="bg-[#f8fbff] px-4 py-16">
+      <section className="bg-[#f5f5f5] px-4 py-16">
         <div className="mx-auto max-w-[1200px]">
-          <h2 className="section-title inline-block text-[38px] font-medium text-[#23244a]"><span className="text-[#ffc219]">Product</span> Range</h2>
+          <h2 className="section-title inline-block text-[38px] font-medium text-[#222]"><span className="text-[#ffc219]">Product</span> Range</h2>
           <div className="mt-8 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {products.slice(0, 6).map((product) => (
               <article key={product.id} className="product-range-card bg-white shadow-sm">
                 <img src={product.image} alt={product.title} className="h-[210px] w-full object-cover" />
                 <div className="p-5">
-                  <h4 className="text-[20px] font-medium uppercase text-[#23244a]">{product.title}</h4>
+                  <h4 className="text-[20px] font-medium uppercase text-[#222]">{product.title}</h4>
                   <p className="mt-2 text-[15px] leading-7">{product.shortDescription}</p>
                 </div>
               </article>
@@ -308,9 +308,9 @@ export default function HomePage() {
       </section>
 
       {/* ── INDUSTRIES WE SERVE ── */}
-      <section className="bg-[#eef3f9] pb-0">
+      <section className="bg-[#f0f0f0] pb-0">
         <div className="mx-auto max-w-[1200px] px-4 pt-16 text-center">
-          <h2 className="section-title inline-block text-[38px] font-medium text-[#23244a]">Industries <span className="text-[#ffc219]">We Serve</span></h2>
+          <h2 className="section-title inline-block text-[38px] font-medium text-[#222]">Industries <span className="text-[#ffc219]">We Serve</span></h2>
         </div>
         <div className="mx-auto mt-8 grid max-w-[1200px] grid-cols-2 gap-4 px-4 pb-16 sm:grid-cols-3 lg:grid-cols-4">
           {industries.map(({ label, img }) => (
@@ -333,14 +333,14 @@ export default function HomePage() {
       {/* ── TECHNICAL FLOORING SYSTEMS ── */}
       <section className="px-4 py-16 md:py-20">
         <div className="mx-auto max-w-[1200px]">
-          <h2 className="section-title inline-block text-[38px] font-medium text-[#23244a]">Technical <span className="text-[#ffc219]">Flooring Systems</span></h2>
+          <h2 className="section-title inline-block text-[38px] font-medium text-[#222]">Technical <span className="text-[#ffc219]">Flooring Systems</span></h2>
           <div className="mt-8 grid gap-6 md:grid-cols-3">
             {technicalSystems.map((sys) => (
-              <article key={sys.name} className="rounded border border-[#dde8f4] bg-white p-7 shadow-sm">
-                <div className="mb-4 inline-block rounded bg-[#ffc219] px-3 py-1 text-xs font-bold uppercase text-[#1f3f68]">{sys.thickness}</div>
-                <h4 className="text-[19px] font-semibold text-[#23244a]">{sys.name}</h4>
-                <p className="mt-1 text-xs font-medium uppercase tracking-wide text-[#4f81bd]">{sys.use}</p>
-                <p className="mt-3 text-[14px] leading-7 text-[#55647a]">{sys.desc}</p>
+              <article key={sys.name} className="border border-[#e5e5e5] bg-white p-7 transition hover:border-[#ffc219] hover:shadow-md">
+                <div className="mb-4 inline-block bg-[#ffc219] px-3 py-1 text-xs font-bold uppercase text-[#222]">{sys.thickness}</div>
+                <h4 className="text-[19px] font-semibold text-[#222]">{sys.name}</h4>
+                <p className="mt-1 text-xs font-medium uppercase tracking-wide text-[#888]">{sys.use}</p>
+                <p className="mt-3 text-[14px] leading-7 text-[#666]">{sys.desc}</p>
               </article>
             ))}
           </div>
@@ -348,17 +348,17 @@ export default function HomePage() {
       </section>
 
       {/* ── FINAL CTA ── */}
-      <section className="bg-[#f8fbff] px-4 py-20">
+      <section className="bg-[#f5f5f5] px-4 py-20">
         <div className="mx-auto flex max-w-[1200px] flex-col items-start justify-between gap-6 md:flex-row md:items-center">
           <div>
-            <h3 className="text-[32px] font-medium text-[#23244a]">
+            <h3 className="text-[32px] font-medium text-[#222]">
               Get a <span className="font-bold text-[#ffc219]">Free Site Inspection</span> Today
             </h3>
-            <p className="mt-2 text-[15px] text-[#55647a]">Call us at <a href="tel:+919890002239" className="font-semibold text-[#1f3f68] hover:text-[#ffc219]">+91-9890002239</a> or send an enquiry online.</p>
+            <p className="mt-2 text-[15px] text-[#666]">Call us at <a href="tel:+919890002239" className="font-semibold text-[#222] underline hover:text-[#ffc219]">+91-9890002239</a> or send an enquiry online.</p>
           </div>
           <div className="flex flex-wrap gap-3">
             <a href="tel:+919890002239" className="btn-theme rounded px-7 py-3 text-sm font-semibold uppercase">Call Now</a>
-            <Link to="/enquiry" className="rounded border border-[#1f3f68] px-7 py-3 text-sm font-semibold uppercase text-[#1f3f68] hover:bg-[#1f3f68] hover:text-white">Request Quote</Link>
+            <Link to="/enquiry" className="border border-[#222] px-7 py-3 text-sm font-semibold uppercase text-[#222] hover:bg-[#222] hover:text-white">Request Quote</Link>
           </div>
         </div>
       </section>
