@@ -3,7 +3,7 @@ import type { ReactNode } from 'react';
 
 const serviceItems = [
   'Surface Preparation',
-  'Epoxy Flooring Installation',
+  'Epoxy Flooring application',
   'PU Flooring Systems',
   'Decorative Coatings',
   'Industrial Painting',

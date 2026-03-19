@@ -38,7 +38,7 @@ export const products: Product[] = [
     subCategory: 'INDUSTRIAL FLOORING',
     code: 'SPS-01',
     title: 'Epoxy Flooring Systems',
-    image: '/images/product-range/epoxy-flooring-system.svg',
+    image: '/images/product-range/epoxy-flooring-system.svg.webp',
     shortDescription: 'Seamless, durable flooring for industrial and commercial environments.',
     description: 'High-performance epoxy flooring systems for heavy-duty operations, traffic, and long service life.',
     features: ['Abrasion resistant', 'Chemical resistant', 'Seamless finish', 'Low maintenance'],

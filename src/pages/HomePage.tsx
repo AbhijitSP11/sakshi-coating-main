@@ -14,7 +14,7 @@ const industries = [
 
 const capabilities = [
   'Surface preparation and treatment',
-  'Industrial epoxy flooring installation',
+  'Industrial Epoxy Flooring application',
   'Polyurethane flooring systems',
   'Decorative and protective coatings',
   'Car park and deck flooring',
