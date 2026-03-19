@@ -86,6 +86,23 @@ export default function EnquiryPage() {
     setSubmitMessage('');
     setSubmitStatus(null);
 
+    const buildMailtoLink = () => {
+      const body = [
+        `Company Name: ${form.companyName}`,
+        `Contact Person: ${form.contactPerson}`,
+        `Phone: ${form.phone}`,
+        `Email: ${form.email}`,
+        `Location: ${form.location}`,
+        `Country: ${form.country}`,
+        `Project Type: ${form.projectType}`,
+        form.areaInSqft ? `Area: ${form.areaInSqft} sq ft` : '',
+        `\nRequirement Details:\n${form.requirement}`,
+      ]
+        .filter(Boolean)
+        .join('\n');
+      return `mailto:${enquiryRecipient}?subject=${encodeURIComponent(`Website Enquiry: ${form.companyName}`)}&body=${encodeURIComponent(body)}`;
+    };
+
     try {
       const formData = new FormData();
       formData.append('name', form.contactPerson);
@@ -110,9 +127,7 @@ export default function EnquiryPage() {
 
       const response = await fetch(`https://formsubmit.co/ajax/${enquiryRecipient}`, {
         method: 'POST',
-        headers: {
-          Accept: 'application/json',
-        },
+        headers: { Accept: 'application/json' },
         body: formData,
       });
 
@@ -127,8 +142,12 @@ export default function EnquiryPage() {
       setForm(initialFormState);
       setErrors({});
     } catch {
-      setSubmitStatus('error');
-      setSubmitMessage('Unable to send enquiry right now. Please try again in a moment.');
+      // Fallback: open pre-filled email in the user's email client
+      window.location.href = buildMailtoLink();
+      setSubmitStatus('success');
+      setSubmitMessage('Opening your email client with the pre-filled enquiry. Please send the email to complete your submission.');
+      setForm(initialFormState);
+      setErrors({});
     } finally {
       setIsSubmitting(false);
     }

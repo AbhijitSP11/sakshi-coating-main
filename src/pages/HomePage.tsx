@@ -2,11 +2,12 @@ import { Link } from 'react-router-dom';
 import { products } from '../data/products';
 
 const trustedClients = [
-  'Mahindra',
-  'Bosch',
-  'ThyssenKrupp',
-  'MSS India',
-  'Vaishnavi Auto',
+  { name: 'Mahindra', logo: 'https://logo.clearbit.com/mahindra.com' },
+  { name: 'Bosch', logo: 'https://logo.clearbit.com/bosch.com' },
+  { name: 'ThyssenKrupp', logo: 'https://logo.clearbit.com/thyssenkrupp.com' },
+  { name: 'Pidilite', logo: 'https://logo.clearbit.com/pidilite.com' },
+  { name: 'MSS India', logo: null },
+  { name: 'Vaishnavi Auto', logo: null },
 ];
 
 const whyChooseUs = [
@@ -26,14 +27,14 @@ const processSteps = [
 ];
 
 const industries = [
-  { label: 'Automobile Plants', icon: '🚗' },
-  { label: 'Pharma Plants', icon: '💊' },
-  { label: 'Warehouses & Logistics', icon: '📦' },
-  { label: 'Food Processing Units', icon: '🏭' },
-  { label: 'Engineering Plants', icon: '⚙️' },
-  { label: 'Parking Decks', icon: '🅿️' },
-  { label: 'Hospitals & Laboratories', icon: '🏥' },
-  { label: 'Commercial Buildings', icon: '🏢' },
+  { label: 'Automobile Plants', img: 'https://images.unsplash.com/photo-1565814329452-e1efa11c5b89?auto=format&fit=crop&w=600&q=80' },
+  { label: 'Pharma Plants', img: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=600&q=80' },
+  { label: 'Warehouses & Logistics', img: 'https://images.unsplash.com/photo-1553413077-190dd305871c?auto=format&fit=crop&w=600&q=80' },
+  { label: 'Food Processing Units', img: 'https://images.unsplash.com/photo-1574943320219-553eb213f72d?auto=format&fit=crop&w=600&q=80' },
+  { label: 'Engineering Plants', img: 'https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=600&q=80' },
+  { label: 'Parking Decks', img: 'https://images.unsplash.com/photo-1588363548974-c1ec35a72c13?auto=format&fit=crop&w=600&q=80' },
+  { label: 'Hospitals & Laboratories', img: 'https://images.unsplash.com/photo-1551190822-a9333d879b1f?auto=format&fit=crop&w=600&q=80' },
+  { label: 'Commercial Buildings', img: 'https://images.unsplash.com/photo-1486325212027-8081e485255e?auto=format&fit=crop&w=600&q=80' },
 ];
 
 const technicalSystems = [
@@ -58,9 +59,36 @@ const technicalSystems = [
 ];
 
 const galleryItems = [
-  { caption: 'Warehouse Epoxy Flooring – Nashik', before: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=700&q=80', after: 'https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=700&q=80' },
-  { caption: 'Automobile Plant Flooring – Pune', before: 'https://images.unsplash.com/photo-1545558014-8692077e9b5c?auto=format&fit=crop&w=700&q=80', after: 'https://images.unsplash.com/photo-1565793979792-83cbdc2d8b6d?auto=format&fit=crop&w=700&q=80' },
-  { caption: 'Pharma Grade Flooring – Nashik', before: 'https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=700&q=80', after: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=700&q=80' },
+  {
+    caption: 'Warehouse Epoxy Flooring – Nashik',
+    before: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=700&q=80',
+    after: 'https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=700&q=80',
+  },
+  {
+    caption: 'Automobile Plant Flooring – Pune',
+    before: 'https://images.unsplash.com/photo-1601979031925-424e53b6caaa?auto=format&fit=crop&w=700&q=80',
+    after: 'https://images.unsplash.com/photo-1565793979792-83cbdc2d8b6d?auto=format&fit=crop&w=700&q=80',
+  },
+  {
+    caption: 'Pharma Grade Flooring – Nashik',
+    before: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=700&q=80',
+    after: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=700&q=80',
+  },
+  {
+    caption: 'Food Processing Unit – Nashik',
+    before: 'https://images.unsplash.com/photo-1524813686514-a57563d77965?auto=format&fit=crop&w=700&q=80',
+    after: 'https://images.unsplash.com/photo-1574943320219-553eb213f72d?auto=format&fit=crop&w=700&q=80',
+  },
+  {
+    caption: 'ESD Flooring – Electronics Plant',
+    before: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=700&q=80',
+    after: 'https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&w=700&q=80',
+  },
+  {
+    caption: 'Commercial Building – Pune',
+    before: 'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=700&q=80',
+    after: 'https://images.unsplash.com/photo-1486325212027-8081e485255e?auto=format&fit=crop&w=700&q=80',
+  },
 ];
 
 const serviceCards = [
@@ -107,13 +135,25 @@ export default function HomePage() {
       <section className="border-b border-[#e8eef6] bg-white px-4 py-10">
         <div className="mx-auto max-w-[1200px]">
           <p className="mb-6 text-center text-xs font-semibold uppercase tracking-[2px] text-[#7a8faa]">Trusted by Leading Industrial Companies</p>
-          <div className="flex flex-wrap items-center justify-center gap-4 md:gap-8">
-            {trustedClients.map((client) => (
+          <div className="flex flex-wrap items-center justify-center gap-6 md:gap-10">
+            {trustedClients.map(({ name, logo }) => (
               <div
-                key={client}
-                className="rounded border border-[#dde8f4] bg-[#f8fbff] px-6 py-3 text-[15px] font-semibold text-[#1f3f68]"
+                key={name}
+                className="flex min-w-[110px] flex-col items-center gap-2 rounded border border-[#dde8f4] bg-[#f8fbff] px-6 py-4 transition hover:border-[#4f81bd] hover:shadow-sm"
               >
-                {client}
+                {logo ? (
+                  <img
+                    src={logo}
+                    alt={name}
+                    className="h-9 w-auto object-contain grayscale opacity-60 transition hover:grayscale-0 hover:opacity-100"
+                    onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
+                  />
+                ) : (
+                  <div className="flex h-9 w-9 items-center justify-center rounded-full bg-[#1f3f68] text-[13px] font-bold text-white">
+                    {name.slice(0, 2).toUpperCase()}
+                  </div>
+                )}
+                <span className="text-[13px] font-semibold text-[#1f3f68]">{name}</span>
               </div>
             ))}
           </div>
@@ -218,11 +258,27 @@ export default function HomePage() {
               <article key={item.caption} className="overflow-hidden rounded shadow-sm">
                 <div className="grid grid-cols-2">
                   <div className="relative">
-                    <img src={item.before} alt={`Before – ${item.caption}`} className="h-[180px] w-full object-cover" />
+                    <img
+                      src={item.before}
+                      alt={`Before – ${item.caption}`}
+                      className="h-[180px] w-full object-cover"
+                      onError={(e) => {
+                        const t = e.target as HTMLImageElement;
+                        t.src = 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=700&q=80';
+                      }}
+                    />
                     <span className="absolute left-2 top-2 rounded bg-[#1f3f68]/80 px-2 py-0.5 text-[11px] font-semibold uppercase text-white">Before</span>
                   </div>
                   <div className="relative">
-                    <img src={item.after} alt={`After – ${item.caption}`} className="h-[180px] w-full object-cover" />
+                    <img
+                      src={item.after}
+                      alt={`After – ${item.caption}`}
+                      className="h-[180px] w-full object-cover"
+                      onError={(e) => {
+                        const t = e.target as HTMLImageElement;
+                        t.src = 'https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=700&q=80';
+                      }}
+                    />
                     <span className="absolute left-2 top-2 rounded bg-[#ffc219] px-2 py-0.5 text-[11px] font-semibold uppercase text-[#1f3f68]">After</span>
                   </div>
                 </div>
@@ -257,10 +313,18 @@ export default function HomePage() {
           <h2 className="section-title inline-block text-[38px] font-medium text-[#23244a]">Industries <span className="text-[#ffc219]">We Serve</span></h2>
         </div>
         <div className="mx-auto mt-8 grid max-w-[1200px] grid-cols-2 gap-4 px-4 pb-16 sm:grid-cols-3 lg:grid-cols-4">
-          {industries.map(({ label, icon }) => (
-            <div key={label} className="flex items-center gap-3 rounded bg-white p-5 shadow-sm">
-              <span className="text-2xl">{icon}</span>
-              <h4 className="text-[15px] font-medium text-[#23244a]">{label}</h4>
+          {industries.map(({ label, img }) => (
+            <div key={label} className="group relative overflow-hidden rounded shadow-sm">
+              <img
+                src={img}
+                alt={label}
+                className="h-[160px] w-full object-cover transition duration-300 group-hover:scale-105"
+                onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#1f3f68]/85 via-[#1f3f68]/30 to-transparent" />
+              <div className="absolute bottom-0 left-0 right-0 p-4">
+                <h4 className="text-[14px] font-semibold leading-tight text-white drop-shadow">{label}</h4>
+              </div>
             </div>
           ))}
         </div>
