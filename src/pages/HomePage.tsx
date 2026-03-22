@@ -248,47 +248,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── BEFORE & AFTER GALLERY ── */}
-      <section className="px-4 py-16 md:py-20">
-        <div className="mx-auto max-w-[1200px]">
-          <h2 className="section-title inline-block text-[38px] font-medium text-[#222]">Project <span className="text-[#ffc219]">Gallery</span></h2>
-          <p className="mt-2 text-[15px] text-[#666]">Before &amp; after results from our completed projects.</p>
-          <div className="mt-8 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {galleryItems.map((item) => (
-              <article key={item.caption} className="overflow-hidden rounded shadow-sm">
-                <div className="grid grid-cols-2">
-                  <div className="relative">
-                    <img
-                      src={item.before}
-                      alt={`Before – ${item.caption}`}
-                      className="h-[180px] w-full object-cover"
-                      onError={(e) => {
-                        const t = e.target as HTMLImageElement;
-                        t.src = 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=700&q=80';
-                      }}
-                    />
-                    <span className="absolute left-2 top-2 bg-black/70 px-2 py-0.5 text-[11px] font-semibold uppercase text-white">Before</span>
-                  </div>
-                  <div className="relative">
-                    <img
-                      src={item.after}
-                      alt={`After – ${item.caption}`}
-                      className="h-[180px] w-full object-cover"
-                      onError={(e) => {
-                        const t = e.target as HTMLImageElement;
-                        t.src = 'https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=700&q=80';
-                      }}
-                    />
-                    <span className="absolute left-2 top-2 rounded bg-[#ffc219] px-2 py-0.5 text-[11px] font-semibold uppercase text-[#222]">After</span>
-                  </div>
-                </div>
-                <div className="bg-white px-4 py-3 text-[13px] font-medium text-[#222]">{item.caption}</div>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* ── PRODUCT RANGE ── */}
       <section className="bg-[#f5f5f5] px-4 py-16">
         <div className="mx-auto max-w-[1200px]">
