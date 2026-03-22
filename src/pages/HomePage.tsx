@@ -58,39 +58,6 @@ const technicalSystems = [
   },
 ];
 
-const galleryItems = [
-  {
-    caption: 'Warehouse Epoxy Flooring – Nashik',
-    before: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=700&q=80',
-    after: 'https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=700&q=80',
-  },
-  {
-    caption: 'Automobile Plant Flooring – Pune',
-    before: 'https://images.unsplash.com/photo-1601979031925-424e53b6caaa?auto=format&fit=crop&w=700&q=80',
-    after: 'https://images.unsplash.com/photo-1565793979792-83cbdc2d8b6d?auto=format&fit=crop&w=700&q=80',
-  },
-  {
-    caption: 'Pharma Grade Flooring – Nashik',
-    before: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=700&q=80',
-    after: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=700&q=80',
-  },
-  {
-    caption: 'Food Processing Unit – Nashik',
-    before: 'https://images.unsplash.com/photo-1524813686514-a57563d77965?auto=format&fit=crop&w=700&q=80',
-    after: 'https://images.unsplash.com/photo-1574943320219-553eb213f72d?auto=format&fit=crop&w=700&q=80',
-  },
-  {
-    caption: 'ESD Flooring – Electronics Plant',
-    before: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=700&q=80',
-    after: 'https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&w=700&q=80',
-  },
-  {
-    caption: 'Commercial Building – Pune',
-    before: 'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=700&q=80',
-    after: 'https://images.unsplash.com/photo-1486325212027-8081e485255e?auto=format&fit=crop&w=700&q=80',
-  },
-];
-
 const serviceCards = [
   { title: 'Industrial Epoxy Flooring', icon: <svg viewBox="0 0 24 24" className="h-8 w-8" fill="none" stroke="currentColor" strokeWidth="1.7"><rect x="2" y="3" width="20" height="18" rx="2"/><path d="M2 9h20M9 21V9"/></svg> },
   { title: 'Self Levelling Flooring', icon: <svg viewBox="0 0 24 24" className="h-8 w-8" fill="none" stroke="currentColor" strokeWidth="1.7"><path d="M3 12h18M3 17h18M3 7h18"/></svg> },
