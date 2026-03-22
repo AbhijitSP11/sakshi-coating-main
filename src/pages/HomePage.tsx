@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import { products } from '../data/products';
 
 const trustedClients = [
-  { name: 'Mahindra', logo: '/images/mahindra-logo.png' },
+  { name: 'Mahindra', logo: '/images/mahindra-logo.webp' },
   { name: 'Bosch', logo: '/images/bosch-logo.png' },
   { name: 'ThyssenKrupp', logo: '/images/ThyssenKrupp.png' },
   { name: 'Pidilite', logo: '/images/Pidilite_logo.png' },
