@@ -3,8 +3,8 @@ import { products } from '../data/products';
 
 const trustedClients = [
   { name: 'Mahindra', logo: '/images/mahindra-logo.webp' },
-  { name: 'Bosch', logo: '/images/bosch-logo.png' },
-  { name: 'ThyssenKrupp', logo: '/images/ThyssenKrupp.png' },
+  { name: 'Bosch', logo: '/images/Bosch_logo.png' },
+  { name: 'ThyssenKrupp', logo: '/images/thyssenkrupp-logo.png' },
   { name: 'Pidilite', logo: '/images/Pidilite_logo.png' },
   { name: 'MSS India', logo: '/images/mss-india-logo.png' },
   { name: 'Vaishnavi Auto', logo: '/images/viashnavi-auto-logo.png' },
@@ -112,7 +112,7 @@ export default function HomePage() {
                   <img
                     src={logo}
                     alt={name}
-                    className="h-9 w-auto object-contain grayscale opacity-50 transition hover:grayscale-0 hover:opacity-100"
+                    className="h-9 w-auto object-contain"
                     onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
                   />
                 ) : (
