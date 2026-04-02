@@ -4,16 +4,16 @@ export const products: Product[] = [
   {
     id: 'architectural-coatings-epoxy-grouting',
     category: 'ARCHITECTURAL COATINGS',
-    subCategory: 'SAKSHI EPOXY GROUTING',
-    code: 'SAKSHI THANE 531',
-    title: 'SAKSHI Epoxy Grouting',
+    subCategory: 'EPOXY GROUTING',
+    code: 'THANE 531',
+    title: 'Epoxy Grouting',
     image: '/images/product-range/epoxy-grounting.webp',
     shortDescription: 'Premium architectural and protective epoxy grouting solutions for industrial, commercial, and residential flooring.',
-    description: 'SAKSHI COATING PVT. LTD. develops premium solvent and water-based industrial, marine, high-performance, and architectural paints and coatings.',
+    description: 'SP Solutions develops premium solvent and water-based industrial, marine, high-performance, and architectural paints and coatings.',
     descriptionParagraphs: [
-      'SAKSHI COATING PVT. LTD. is one of the leading manufacturers and supplier engaged in providing various types of paints and coatings. We develop premium ranges of solvent and water-based industrial, marine, high-performance, and architectural paints and coatings, including epoxy, polyurethane (PU), alkyd resin, chlorinated rubber (CR), acrylic resin, and heat-resistant paints up to 600 C.',
-      'Sakshi Coatings has strong expertise in executing all types of epoxy and PU floor coating application and supply jobs.',
-      'Sakshi Coatings supplies material throughout India to light, medium, and heavy engineering units, including automobile industries, warehouses, pharmaceuticals, printing, petro-chemical, off-shore, foundries, packaging industry, and more.',
+      'SP Solutions is one of the leading manufacturers and supplier engaged in providing various types of paints and coatings. We develop premium ranges of solvent and water-based industrial, marine, high-performance, and architectural paints and coatings, including epoxy, polyurethane (PU), alkyd resin, chlorinated rubber (CR), acrylic resin, and heat-resistant paints up to 600 C.',
+      'SP Solutions has strong expertise in executing all types of epoxy and PU floor coating application and supply jobs.',
+      'SP Solutions supplies material throughout India to light, medium, and heavy engineering units, including automobile industries, warehouses, pharmaceuticals, printing, petro-chemical, off-shore, foundries, packaging industry, and more.',
       'We also provide anti-corrosion coatings, construction chemicals, high-performance coating for off-shore and marine environments, heat-resistant coatings, pipeline coating, food-grade epoxy coating for pharmaceutical and food industries, all sealants, and waterproofing admixtures for various industrial sectors.',
     ],
     applications: [

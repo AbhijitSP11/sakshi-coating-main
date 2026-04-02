@@ -24,7 +24,7 @@ export default function AboutPage() {
         <div className="mx-auto max-w-[1200px]">
           <h3 className="section-title inline-block text-[40px] font-medium text-[#23244a]">Who <span className="text-[#ffc219]">We Are</span></h3>
           <p className="mt-6 text-[16px] leading-8">
-            SP Solutions (Sakshi Coating) is a Nashik-based industrial flooring contractor with over <strong>25 years of hands-on experience</strong> in epoxy, polyurethane, and protective coating systems. We serve factories, warehouses, pharma plants, food processing units, and commercial spaces across Maharashtra.
+            SP Solutions is a Nashik-based industrial flooring contractor with over <strong>25 years of hands-on experience</strong> in epoxy, polyurethane, and protective coating systems. We serve factories, warehouses, pharma plants, food processing units, and commercial spaces across Maharashtra.
           </p>
           <p className="mt-4 text-[16px] leading-8">
             As an authorised dealer of <strong>Pidilite CIPY products</strong>, we ensure that every project uses certified, high-performance materials. Our skilled application team delivers consistent, durable results — on time and within scope.

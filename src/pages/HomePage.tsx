@@ -12,7 +12,7 @@ const trustedClients = [
 
 const whyChooseUs = [
   { icon: '🏆', title: '25+ Years Experience', desc: 'Decades of proven expertise in industrial flooring systems across Maharashtra.' },
-  { icon: '🤝', title: 'Pidilite CIPY Dealer', desc: 'Authorised dealer of Pidilite CIPY products, ensuring premium material quality.' },
+  { icon: '🤝', title: 'Pidilite CIPY Products', desc: 'Authorised dealer of Pidilite CIPY products, ensuring premium material quality.' },
   { icon: '👷', title: 'Skilled Application Team', desc: 'Trained and supervised applicators for precise, consistent results every project.' },
   { icon: '🏭', title: 'Industrial Client Experience', desc: 'Trusted by automobile plants, pharma, warehouses, and food processing units.' },
   { icon: '⚡', title: 'Fast Project Completion', desc: 'Efficient scheduling and execution to minimise your operational downtime.' },
@@ -27,12 +27,12 @@ const processSteps = [
 ];
 
 const industries = [
-  { label: 'Automobile Plants', img: 'https://images.unsplash.com/photo-1565814329452-e1efa11c5b89?auto=format&fit=crop&w=600&q=80' },
+  { label: 'Automobile Plants', img: 'https://images.pexels.com/photos/19233057/pexels-photo-19233057.jpeg' },
   { label: 'Pharma Plants', img: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=600&q=80' },
   { label: 'Warehouses & Logistics', img: 'https://images.unsplash.com/photo-1553413077-190dd305871c?auto=format&fit=crop&w=600&q=80' },
   { label: 'Food Processing Units', img: 'https://images.unsplash.com/photo-1574943320219-553eb213f72d?auto=format&fit=crop&w=600&q=80' },
   { label: 'Engineering Plants', img: 'https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=600&q=80' },
-  { label: 'Parking Decks', img: 'https://images.unsplash.com/photo-1588363548974-c1ec35a72c13?auto=format&fit=crop&w=600&q=80' },
+  { label: 'Parking Decks', img: 'https://images.pexels.com/photos/103601/pexels-photo-103601.jpeg' },
   { label: 'Hospitals & Laboratories', img: 'https://images.unsplash.com/photo-1551190822-a9333d879b1f?auto=format&fit=crop&w=600&q=80' },
   { label: 'Commercial Buildings', img: 'https://images.unsplash.com/photo-1486325212027-8081e485255e?auto=format&fit=crop&w=600&q=80' },
 ];
@@ -133,7 +133,7 @@ export default function HomePage() {
           <div className="mx-auto max-w-[980px] text-center">
             <h2 className="section-title inline-block text-[38px] font-medium text-[#222]">About <span className="text-[#ffc219]">SP Solutions</span></h2>
             <p className="mt-5 text-[16px] leading-8">
-              SP Solutions (Sakshi Coating) is a Nashik-based industrial flooring contractor with over <strong>25 years of experience</strong>. We specialise in epoxy, polyurethane, and protective coating systems for factories, warehouses, pharma plants, and commercial spaces. As an authorised dealer of <strong>Pidilite CIPY products</strong>, we guarantee material quality and performance on every project.
+              SP Solutions is a Nashik-based industrial flooring contractor with over <strong>25 years of experience</strong>. We specialise in epoxy, polyurethane, and protective coating systems for factories, warehouses, pharma plants, and commercial spaces. As an authorised dealer of <strong>Pidilite CIPY products</strong>, we guarantee material quality and performance on every project.
             </p>
           </div>
 
