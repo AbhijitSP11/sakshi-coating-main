@@ -1,6 +1,6 @@
 const whyChooseUs = [
   { title: '25+ Years Experience', desc: 'Over two and a half decades of specialisation in industrial flooring systems across Nashik and Maharashtra.' },
-  { title: 'Dealer of Pidilite CIPY Products', desc: 'Authorised dealer ensuring you get genuine, high-performance CIPY epoxy and PU materials on every project.' },
+  { title: 'Dealer of Pidilite CIPY Products', desc: 'We regularly work with high-quality epoxy systems from leading manufacturers such as Cipy Polyurethanes Pvt Ltd, and PU materials on every project.' },
   { title: 'Skilled Application Team', desc: 'Trained technicians and supervised applicators delivering consistent, high-quality results.' },
   { title: 'Industrial Client Experience', desc: 'Trusted by automobile plants, pharma facilities, warehouses, food processing units, and engineering plants.' },
   { title: 'Fast Project Completion', desc: 'Efficient project scheduling minimises downtime and ensures timely handover.' },
@@ -27,7 +27,7 @@ export default function AboutPage() {
             SP Solutions is a Nashik-based industrial flooring contractor with over <strong>25 years of hands-on experience</strong> in epoxy, polyurethane, and protective coating systems. We serve factories, warehouses, pharma plants, food processing units, and commercial spaces across Maharashtra.
           </p>
           <p className="mt-4 text-[16px] leading-8">
-            As an authorised dealer of <strong>Pidilite CIPY products</strong>, we ensure that every project uses certified, high-performance materials. Our skilled application team delivers consistent, durable results — on time and within scope.
+            We regularly work with high-quality epoxy systems from leading manufacturers such as <strong> Cipy Polyurethanes Pvt Ltd </strong>, depending on project requirements. Material selection is based on site conditions, durability needs, and client preferences.
           </p>
 
           <div className="mt-10 grid gap-8 lg:grid-cols-2">

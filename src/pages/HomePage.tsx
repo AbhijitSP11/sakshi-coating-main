@@ -7,12 +7,12 @@ const trustedClients = [
   { name: 'ThyssenKrupp', logo: '/images/thyssenkrupp-logo.png' },
   { name: 'Pidilite', logo: '/images/Pidilite_logo.png' },
   { name: 'MSS India', logo: '/images/mss-india-logo.png' },
-  { name: 'Vaishnavi Auto', logo: '/images/viashnavi-auto-logo.png' },
+  { name: 'Kirloskar Engines', logo: '/images/kirloskar_engines.PNG' },
 ];
 
 const whyChooseUs = [
   { icon: '🏆', title: '25+ Years Experience', desc: 'Decades of proven expertise in industrial flooring systems across Maharashtra.' },
-  { icon: '🤝', title: 'Pidilite CIPY Products', desc: 'Authorised dealer of Pidilite CIPY products, ensuring premium material quality.' },
+  { icon: '🤝', title: 'Pidilite CIPY Products', desc: 'We regularly work with high-quality epoxy systems from leading manufacturers such as Cipy Polyurethanes Pvt Ltd.' },
   { icon: '👷', title: 'Skilled Application Team', desc: 'Trained and supervised applicators for precise, consistent results every project.' },
   { icon: '🏭', title: 'Industrial Client Experience', desc: 'Trusted by automobile plants, pharma, warehouses, and food processing units.' },
   { icon: '⚡', title: 'Fast Project Completion', desc: 'Efficient scheduling and execution to minimise your operational downtime.' },
@@ -133,7 +133,7 @@ export default function HomePage() {
           <div className="mx-auto max-w-[980px] text-center">
             <h2 className="section-title inline-block text-[38px] font-medium text-[#222]">About <span className="text-[#ffc219]">SP Solutions</span></h2>
             <p className="mt-5 text-[16px] leading-8">
-              SP Solutions is a Nashik-based industrial flooring contractor with over <strong>25 years of experience</strong>. We specialise in epoxy, polyurethane, and protective coating systems for factories, warehouses, pharma plants, and commercial spaces. As an authorised dealer of <strong>Pidilite CIPY products</strong>, we guarantee material quality and performance on every project.
+              SP Solutions is a Nashik-based industrial flooring contractor with over <strong>25 years of experience</strong>. We specialise in epoxy, polyurethane, and protective coating systems for factories, warehouses, pharma plants, and commercial spaces.    We regularly work with high-quality epoxy systems from leading manufacturers such as <strong> Cipy Polyurethanes Pvt Ltd </strong>, depending on project requirements. Material selection is based on site conditions, durability needs, and client preferences.
             </p>
           </div>
 

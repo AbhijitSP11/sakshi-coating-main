@@ -93,7 +93,7 @@ export const products: Product[] = [
     subCategory: 'PARKING STRUCTURES',
     code: 'SPS-06',
     title: 'Car Park & Deck Flooring',
-    image: 'https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?auto=format&fit=crop&w=1200&q=80',
+    image: '/images/product-range/car_parking.jpeg',
     shortDescription: 'Heavy-duty flooring systems for ramps, decks, and parking structures.',
     description: 'Anti-skid and heavy-traffic deck coating systems for long-term weather and wear protection.',
     features: ['Anti-skid finish', 'Traffic resistant', 'Weather protection', 'Long-term durability'],

@@ -61,17 +61,6 @@ export default function Navbar() {
 
   return (
     <header className="absolute left-0 top-0 z-50 w-full">
-      <div className="bg-[#4f81bd] text-white">
-        <div className="mx-auto flex w-full max-w-[1200px] items-center justify-between gap-3 px-4 py-2 text-xs sm:text-sm">
-          <a href="mailto:spsolutions.in.com@gmail.com" className="hidden truncate hover:text-[#ffc219] sm:inline-block">
-            spsolutions.in.com@gmail.com
-          </a>
-          <a href="tel:+919890002239" className="hover:text-[#ffc219]">
-            +91-9890002239
-          </a>
-        </div>
-      </div>
-
       <div className="bg-transparent">
         <div className="mx-auto flex w-full max-w-[1200px] items-center justify-between px-4 py-3 lg:py-4">
           <Link to="/" className="flex items-center">
