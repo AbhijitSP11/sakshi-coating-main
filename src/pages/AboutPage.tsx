@@ -12,7 +12,7 @@ export default function AboutPage() {
     <>
       <section
         className="relative overflow-hidden px-4 pb-12 pt-[190px] text-center"
-        style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1572981779307-38b8cabb2407?auto=format&fit=crop&w=1600&q=80)', backgroundPosition: 'center', backgroundSize: 'cover' }}
+        style={{ backgroundImage: 'url(/images/about-hero-bg.jpg)', backgroundPosition: 'center', backgroundSize: 'cover' }}
       >
         <div className="absolute inset-0 bg-[#121628]/70" />
         <div className="relative mx-auto max-w-[900px] text-white">

@@ -27,14 +27,14 @@ const processSteps = [
 ];
 
 const industries = [
-  { label: 'Automobile Plants', img: 'https://images.pexels.com/photos/19233057/pexels-photo-19233057.jpeg' },
-  { label: 'Pharma Plants', img: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=600&q=80' },
-  { label: 'Warehouses & Logistics', img: 'https://images.unsplash.com/photo-1553413077-190dd305871c?auto=format&fit=crop&w=600&q=80' },
-  { label: 'Food Processing Units', img: 'https://images.unsplash.com/photo-1574943320219-553eb213f72d?auto=format&fit=crop&w=600&q=80' },
-  { label: 'Engineering Plants', img: 'https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=600&q=80' },
-  { label: 'Parking Decks', img: 'https://images.pexels.com/photos/103601/pexels-photo-103601.jpeg' },
-  { label: 'Hospitals & Laboratories', img: 'https://images.unsplash.com/photo-1551190822-a9333d879b1f?auto=format&fit=crop&w=600&q=80' },
-  { label: 'Commercial Buildings', img: 'https://images.unsplash.com/photo-1486325212027-8081e485255e?auto=format&fit=crop&w=600&q=80' },
+  { label: 'Automobile Plants', img: '/images/industries/automobile-plants.jpg' },
+  { label: 'Pharma Plants', img: '/images/industries/pharma-plants.jpg' },
+  { label: 'Warehouses & Logistics', img: '/images/industries/warehouses.jpg' },
+  { label: 'Food Processing Units', img: '/images/industries/food-processing.jpg' },
+  { label: 'Engineering Plants', img: '/images/industries/engineering-plants.jpg' },
+  { label: 'Parking Decks', img: '/images/industries/parking-decks.jpg' },
+  { label: 'Hospitals & Laboratories', img: '/images/industries/hospitals.jpg' },
+  { label: 'Commercial Buildings', img: '/images/industries/commercial-buildings.jpg' },
 ];
 
 const technicalSystems = [
@@ -74,7 +74,7 @@ export default function HomePage() {
       <section
         className="relative min-h-[760px] overflow-hidden"
         style={{
-          backgroundImage: 'linear-gradient(rgba(18,22,40,0.70), rgba(18,22,40,0.70)), url(https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=1800&q=80)',
+          backgroundImage: 'linear-gradient(rgba(18,22,40,0.70), rgba(18,22,40,0.70)), url(/images/hero-bg.jpg)',
           backgroundPosition: 'center',
           backgroundSize: 'cover',
         }}

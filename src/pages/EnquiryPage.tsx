@@ -157,7 +157,7 @@ export default function EnquiryPage() {
     <>
       <section
         className="relative overflow-hidden px-4 pb-12 pt-[190px] text-center"
-        style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&w=1600&q=80)', backgroundPosition: 'center', backgroundSize: 'cover' }}
+        style={{ backgroundImage: 'url(/images/enquiry-hero-bg.jpg)', backgroundPosition: 'center', backgroundSize: 'cover' }}
       >
         <div className="absolute inset-0 bg-[#121628]/70" />
         <div className="relative mx-auto max-w-[900px] text-white">
@@ -217,19 +217,6 @@ export default function EnquiryPage() {
               onChange={(event) => setForm((prev) => ({ ...prev, areaInSqft: event.target.value }))}
               error={errors.areaInSqft}
             />
-
-            <label className="block text-[14px] text-[#23244a]">
-              <span className="mb-2 block font-medium">Attach File</span>
-              <input
-                type="file"
-                onChange={(event) => {
-                  const attachment = event.target.files?.[0] ?? null;
-                  setForm((prev) => ({ ...prev, attachment }));
-                }}
-                className="block w-full text-sm text-[#23244a] file:mr-4 file:rounded file:border-0 file:bg-[#4f81bd] file:px-4 file:py-2 file:text-sm file:font-medium file:text-white hover:file:bg-[#3d6797]"
-              />
-              <span className="mt-1 block text-xs text-[#666]">{form.attachment?.name || 'No file chosen'}</span>
-            </label>
 
             <div className="md:col-span-2">
               <FormInput textarea label="Requirement Details :" required rows={4} value={form.requirement} onChange={(event) => setForm((prev) => ({ ...prev, requirement: event.target.value }))} error={errors.requirement} />
